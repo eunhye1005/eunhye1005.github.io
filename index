@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>경남테크노파크 조선해양센터</title>
+    <link rel="stylesheet" href="/css/Reset.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/script/jquery.ui/jquery-ui.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="/script/file.js"></script>
+    <script src="/script/board.js"></script>
+    <script src="/script/jquery.ui/jquery-ui.js"></script>
+</head>
+
+<body>
+
+    <header id="header">
+         <div class="logo"><a href="index.jsp"><img src="images/logo.jpg" alt="경남테크노파크 조선해양센터"></a>
+         </div>
+         <div class="navi">
+             <ul>
+                 <li><a href="/intro.jsp">소<span style="padding: 10px;"></span>개</a></li>
+                 <li><a href="/AnnouList.jsp">팀소개</a></li>
+                 <li><a href="/Discover.jsp">지원사업</a></li>
+                 <li><a href="/Notice.jsp">장비지원</a></li>
+                 <li><a href="/BigData.jsp">알림마당</a></li>
+             </ul>
+         </div>
+     </header>
+     <!-- header 끝 -->
+     
+     <!-- 상단이미지 시작 -->
+<body onLoad="javascript:pop()">
+     <div id="topbg">
+         <div class="imgbg">
+             <div class="textbox"><span class="h1">사회 안전사고를 예방하는</span><br/><span class="h2">ICT융합도시, 경남</span>
+             </div>
+         </div>
+     </div>
+
+	<section id="contents">
+       <div class="thumbox">
+            <div class="thum">
+                <a href="intro.jsp"><img id="introImg" src="images/thum01.jpg" onmouseover="this.src='images/thum01on.jpg'" onmouseout="this.src='images/thum01.jpg'" alt="SOS랩 소개"></a>
+            </div>
+            <div class="thum">
+                <a href="Discover.jsp"><img id="discoverImg" src="images/thum02.jpg" onmouseover="this.src='images/thum02on.jpg'" onmouseout="this.src='images/thum02.jpg'" alt="발굴된 제안"></a>
+            </div>
+            <div class="thum">
+                <a href="Annou.jsp"><img id="annouImg" src="images/thum03.jpg" onmouseover="this.src='images/thum03on.jpg'" onmouseout="this.src='images/thum03.jpg'" alt="온라인 제안"></a>
+            </div>
+        </div>
+    </section>
+</body>
+
+<script type="text/javascript">
+	var out = true;
+	var imgChange = changeFunction();
+
+	$("#introImg, #discoverImg, #annouImg").mouseover(function() {
+		out = false;
+		clearInterval(imgChange);
+		if($(this).attr("id") == "introImg") {
+			$("#discoverImg").attr("src", "images/thum02.jpg");
+			$("#annouImg").attr("src", "images/thum03.jpg");
+			$("#introImg").attr("src", "images/thum01on.jpg");
+		} else if($(this).attr("id") == "introImg") {
+			$("#introImg").attr("src", "images/thum01.jpg");
+			$("#annouImg").attr("src", "images/thum03.jpg");
+			$("#introImg").attr("src", "images/thum02on.jpg");
+		} else if($(this).attr("id") == "introImg") {
+			$("#introImg").attr("src", "images/thum01.jpg");
+			$("#discoverImg").attr("src", "images/thum02.jpg");
+			$("#introImg").attr("src", "images/thum03on.jpg");
+		}
+
+	});
+
+	$("#introImg, #discoverImg, #annouImg").mouseout(function() {
+		imgChange = changeFunction();
+		out = true;
+	});
+
+	function changeFunction() {
+		return imgChange = setInterval(function() {
+			if(out) {
+				$("#introImg").attr("src", "images/thum01on.jpg");			
+				setTimeout(function() {
+					$("#introImg").attr("src", "images/thum01.jpg");
+					setTimeout(function() {
+						if(out) {
+							$("#discoverImg").attr("src", "images/thum02on.jpg");						 
+							setTimeout(function() {
+								$("#discoverImg").attr("src", "images/thum02.jpg");
+								setTimeout(function() {
+									if(out) {
+										$("#annouImg").attr("src", "images/thum03on.jpg");									
+										setTimeout(function() {
+											$("#annouImg").attr("src", "images/thum03.jpg");
+										}, 1000); 
+									}
+								}, 1000); 
+
+							}, 1000);
+						}
+					}, 1000);
+
+				}, 1000);
+			}
+
+		}, 6000);
+	}
+
+
+/*	var imgChange = setInterval(function() {
+		if($("#introImg").attr("src") == 'images/thum01.jpg') {
+			$("#annouImg").attr("src", "images/thum03.jpg");
+			$("#introImg").attr("src", "images/thum01on.jpg");
+		} else {
+			$("#introImg").attr("src", "images/thum01.jpg");
+		}
+		
+		setTimeout(function() {
+			if($("#discoverImg").attr("src") == 'images/thum02.jpg') {
+				$("#introImg").attr("src", "images/thum01.jpg");
+				$("#discoverImg").attr("src", "images/thum02on.jpg");
+			} else {
+				$("#discoverImg").attr("src", "images/thum02.jpg");
+			}
+		}, 1000);
+
+		setTimeout(function() {
+			if($("#annouImg").attr("src") == 'images/thum03.jpg') {
+				$("#discoverImg").attr("src", "images/thum02.jpg");
+				$("#annouImg").attr("src", "images/thum03on.jpg");
+			} else {
+				$("#annouImg").attr("src", "images/thum03.jpg");
+			}
+		}, 2000);
+
+	}, 5000);
+
+	$("#introImg, #discoverImg, #annouImg").mouseover(function() {
+		if($(this).attr("id") == "introImg") {
+			$("#discoverImg").attr("src", "images/thum02.jpg");
+			$("#annouImg").attr("src", "images/thum03.jpg");
+			$("#introImg").attr("src", "images/thum01on.jpg");
+		} else if($(this).attr("id") == "introImg") {
+			$("#introImg").attr("src", "images/thum01.jpg");
+			$("#annouImg").attr("src", "images/thum03.jpg");
+		} else if($(this).attr("id") == "introImg") {
+			$("#introImg").attr("src", "images/thum01.jpg");
+			$("#discoverImg").attr("src", "images/thum02.jpg");
+		}
+
+	});
+
+	$("#introImg, #discoverImg, #annouImg").mouseout(function() {
+
+	}); */
+
+/*
+function pop()
+{
+	window.open("popuppage.html", "popup", "width=500,height=705,history=no,resizable=no,status=no,menubar=no")
+}
+*/
+</script>
+
+
+       <footer id="footer">
+            <div class="ft-text">
+				| <a href="privacy.jsp">개인정보 취급 방침</a> | <a href="checklist.jsp">서비스 이용약관</a> |<br>
+            	52919 경남 고성군 동해면 용정3길 190</br>
+            	대표전화 055-670-6621 팩스번호 055-672-3334 이메일 eunhye05@gntp.or.kr</br>
+                Copyright ⓒ 2014 재단법인 경남테크노파크 All rights reserved.
+            </div>
+        </footer>
+	</body>
+</html>
