@@ -5,78 +5,70 @@
         <title>CHANNY WORLD</title>
         <style>
             html, body { margin: 0; padding: 0; height: 100%;}
-            header { width:100%; height: 15%; background: lightcoral; }
-            nav { width: 15%; height:120%; float: left; background: mistyrose; }
-            section { width: 85%; height:120%; float: right; background: snow;}
-            footer { width: 100%; height: 8%; clear: both; background: lightcoral;}
+            header { width: 100%; height: 20%; background: #FFC6A5;}
+            section { width: 100%; height: 70%;}
+            footer { width: 100%; height: 10%; clear: both; background: #FFC6A5; float: right; text-align: center;}
             h1{ font: italic bold 40px consolas, sans-serif; text-align: center;}
+            h2{ text-align: center;}
+            table{ margin-left:auto; margin-right: auto; }
+            td{ text-align: center;}
             .p1 {text-indent: 3em;}
         </style>
     </head>
     <body>
+
 <!-------타이틀 제목------->
         <header>
-            <h1>CHANNY WORLD</h1>
+        <input type="button" value="night" onclick="document.querySelector('body').style.backgroundColor='black'; document.querySelector('body').style.color='white';">
+        <input type="button" value="day" onclick="document.querySelector('body').style.backgroundColor='white'; document.querySelector('body').style.color='black';">
+                <body link="#A0522d" vlink="#A0522d" alink="#A0522d"> 
+                <h1><a href="index.html" style="text-decoration: none; font-size: 50px;">CHANNY WORLD</a></h1>
+
         </header>
 
-        <nav>
+        <section>
 
 <!-------분류------->
+                <br>
             <h2>CHANNY가 좋아하는</h2>
-            <dl><P class="p1"><a href="#색종이">색종이 접기</a></dl>
-            <dl><P class="p1"><a href="#올로">올로 만들기</a></dl>
-            <dl><P class="p1"><a href="#게임">최애 게임</a></dl>
-        </nav>
-        <section>
-            <h2 id="색종이">색종이 접기</h2>
+                <br>
+                <br>
             <table>
                 <tr>
-                    <td><img src="팽이.jpg" img width="320" img height="240"></td>
-                    <td><img src="애벌레.jpg" img width="320" img height="240"></td>
-                    <td><img src="고슴도치.jpg" img width="320" img height="240"></td>
+                    <td>
+                        <a href="색종이.html">
+                        <img src="네모아저씨.jpg" img width="400" img height="350" 
+                            onmouseover="this.src='책.jpg'" onmouseout="this.src='네모아저씨.jpg'"></a></td>
+                    <td>
+                        <a href="코딩.html">
+                        <img src="로보티즈.jpg" img width="400" img height="350" 
+                            onmouseover="this.src='로보티즈2.jpg'" onmouseout="this.src='로보티즈.jpg'"></a></td>
+                    <td>
+                        <a href="게임.html">
+                        <img src="마인크래프트2.jpg" img width="400" img height="350" 
+                            onmouseover="this.src='팽이.jpg'" onmouseout="this.src='마인크래프트2.jpg'"></a></td>
                 </tr>
                 <tr>
-                    <td>팽이접기</td>
-                    <td>애벌레</td>
-                    <td>고슴도치</td>
+                    <td><a href="색종이.html" style="text-decoration: none;">색종이 접기</a></td>
+                    <td><a href="코딩.html" style="text-decoration: none;">코딩하기</a></td>
+                    <td><a href="게임.html" style="text-decoration: none;">게임하기</a></td>
                 </tr>
-            </table>
-<br>
-<br>
-            <h2 id="올로">올로 만들기</h2>
-            <table>
-                <tr>
-                    <td><video src="헬리콥터.mp4" width="320" height="240" controls autoplay>
-                        </video></td>
-                    <td><video src="복싱.mp4" width="320" height="240" controls autoplay>
-                        </video></td>
-                    <td><video src="벌레.mp4" width="320" height="240" controls autoplay>
-                        </video></td>
-                </tr>
-                <tr>
-                    <td>헬리콥터</td>
-                    <td>복싱</td>
-                    <td>벌레</td>
-                </tr>
-            </table>
-<br>
-<br>
-            <h2 id="게임">최애 게임</h2>
-            <table>
-                <tr>
-                    <td><img src="마인크래프트.jpg" img width="320" img height="240"></td>
-                    <td><img src="페이퍼마리오.jpg" img width="320" img height="240"></td>
-                    <td><img src="3D월드.jpg" img width="320" img height="240"></td>
-                </tr>
-                <tr>
-                    <td>마인크래프트</td>
-                    <td>페이퍼마리오</td>
-                    <td>3D월드</td>
-                </tr>
-            </table>
-                                                         
-        </section>
 
-        <footer>footer</footer>
+            </table>  
+                <br>
+                <br>
+                <br>                                      
+        </section>
+        <footer>
+            <nav>
+                <br> 
+                <a href="색종이.html"> 색종이 접기</a> │
+                <a href="코딩.html"> 코딩하기</a> │
+                <a href="게임.html"> 게임하기</a> 
+            </nav>
+            <P>
+                <span> Copyright 2022. eunhye. All Rights Reserved.</span>
+            </P>
+        </footer>
     </body>
 </html>
