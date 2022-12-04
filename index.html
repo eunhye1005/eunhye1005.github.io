@@ -5,29 +5,29 @@
         <title>CHANNY WORLD</title>
         <style>
             html, body { margin: 0; padding: 0; height: 100%;}
-            header { width: 100%; height: 20%; background: #FFC6A5;}
+            header { width: 100%; height: 20%; background-image: url("world.jpg"); background-position: top center;}
             section { width: 100%; height: 70%;}
-            footer { width: 100%; height: 10%; clear: both; background: #FFC6A5; float: right; text-align: center;}
-            h1{ font: italic bold 40px consolas, sans-serif; text-align: center;}
-            h2{ text-align: center;}
+            footer { width: 100%; height: 10%; clear: both; background: #000000; float: right; text-align: center;}
+            h1{ font: normal bold 60px consolas, sans-serif; text-align: center; }
+            h2{ font: normal bold 30px consolas, sans-serif; text-align: center;}
             table{ margin-left:auto; margin-right: auto; }
             td{ text-align: center;}
-            .p1 {text-indent: 3em;}
+            .p1 {text-indent: 5em; font-size:18px; font-weight: 900;}
+            .p2 {text-indent: 0em; font-size:18px; font-weight: 900;}
         </style>
     </head>
     <body>
 
 <!-------타이틀 제목------->
         <header>
-        <input type="button" value="night" onclick="document.querySelector('body').style.backgroundColor='black'; document.querySelector('body').style.color='white';">
-        <input type="button" value="day" onclick="document.querySelector('body').style.backgroundColor='white'; document.querySelector('body').style.color='black';">
-                <body link="#A0522d" vlink="#A0522d" alink="#A0522d"> 
-                <h1><a href="index.html" style="text-decoration: none; font-size: 50px;">CHANNY WORLD</a></h1>
-
+            <br>
+                <body link="#f8f8ff" vlink="#f8f8ff" alink="#f8f8ff">
+                <h1><a href="index.html" style="text-decoration: none;">CHANNY WORLD</a></h1>
         </header>
 
         <section>
-
+        <input type="button" value="night" onclick="document.querySelector('body').style.backgroundColor='black'; document.querySelector('body').style.color='white';">
+        <input type="button" value="day" onclick="document.querySelector('body').style.backgroundColor='white'; document.querySelector('body').style.color='black';">
 <!-------분류------->
                 <br>
             <h2>CHANNY가 좋아하는</h2>
@@ -37,37 +37,34 @@
                 <tr>
                     <td>
                         <a href="색종이.html">
-                        <img src="네모아저씨.jpg" img width="400" img height="350" 
-                            onmouseover="this.src='책.jpg'" onmouseout="this.src='네모아저씨.jpg'"></a></td>
+                        <img src="네모아저씨.jpg" alt="이미지" width="400" height="350" onmouseover="this.src='책.jpg'" onmouseout="this.src='네모아저씨.jpg'"></a></td>
                     <td>
                         <a href="코딩.html">
-                        <img src="로보티즈.jpg" img width="400" img height="350" 
-                            onmouseover="this.src='로보티즈2.jpg'" onmouseout="this.src='로보티즈.jpg'"></a></td>
+                        <img src="로보티즈.jpg" alt="이미지"  width="400" height="350" onmouseover="this.src='로보티즈2.jpg'" onmouseout="this.src='로보티즈.jpg'"></a></td>
                     <td>
                         <a href="게임.html">
-                        <img src="마인크래프트2.jpg" img width="400" img height="350" 
-                            onmouseover="this.src='팽이.jpg'" onmouseout="this.src='마인크래프트2.jpg'"></a></td>
+                        <img src="마인크래프트2.jpg" alt="이미지"  width="400" height="350" onmouseover="this.src='팽이.jpg'" onmouseout="this.src='마인크래프트2.jpg'"></a></td>
                 </tr>
                 <tr>
-                    <td><a href="색종이.html" style="text-decoration: none;">색종이 접기</a></td>
-                    <td><a href="코딩.html" style="text-decoration: none;">코딩하기</a></td>
-                    <td><a href="게임.html" style="text-decoration: none;">게임하기</a></td>
+                    <td><P class="p2"><a href="색종이.html" style="text-decoration: none; color: #000000;">색종이 접기</a></td>
+                    <td><P class="p2"><a href="코딩.html" style="text-decoration: none; color: #000000;">코딩하기</a></td>
+                    <td><P class="p2"><a href="게임.html" style="text-decoration: none; color: #000000;">게임하기</a></td>
                 </tr>
-
             </table>  
                 <br>
                 <br>
                 <br>                                      
         </section>
+
         <footer>
             <nav>
                 <br> 
-                <a href="색종이.html"> 색종이 접기</a> │
-                <a href="코딩.html"> 코딩하기</a> │
+                <a href="색종이.html" > 색종이 접기</a><a style="color: #f8f8ff;"> │
+                <a href="코딩.html"> 코딩하기</a><a style="color: #f8f8ff;"> │
                 <a href="게임.html"> 게임하기</a> 
             </nav>
             <P>
-                <span> Copyright 2022. eunhye. All Rights Reserved.</span>
+                <span><a style="text-decoration: none; color: #f8f8ff;">Copyright 2022. All Rights Reserved.</span>
             </P>
         </footer>
     </body>
